@@ -6,12 +6,14 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
 public class SeleniumTest {
+	WebDriver driver;
+	
   @Test
-  public void f() {
+  public void CanLaunchChromeBrowser() {
 	  //C:\\Users\\CDantas\\Desktop\\JV training\\chromedriver.exe
 	  //Arrange
 //	  System.setProperty("webdriver.chrome.driver", "C:\\Users\\CDantas\\Desktop\\JV training\\chromedriver.exe");
-	  WebDriver driver = new ChromeDriver();
+	 
 	  String url = "https://www.google.com/";
 	  //Act
 	  driver.navigate().to(url);
@@ -21,10 +23,12 @@ public class SeleniumTest {
   }
   @BeforeClass
   public void beforeClass() {
+	  driver = new ChromeDriver();
   }
 
   @AfterClass
   public void afterClass() {
+	  driver.quit();
   }
 
 }

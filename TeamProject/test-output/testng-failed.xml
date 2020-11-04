@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SeleniumTest">
+      <class name="TheInternet">
         <methods>
+          <include name="tc5CanSetAnInput"/>
           <include name="afterClass"/>
           <include name="beforeClass"/>
-          <include name="f"/>
         </methods>
-      </class> <!-- SeleniumTest -->
+      </class> <!-- TheInternet -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
