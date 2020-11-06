@@ -1,5 +1,8 @@
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+
+import java.net.URL;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -57,10 +60,7 @@ public class TheInternet {
   
   @Test
   public void tc5CanSetAnInput() {
-	  //C:\\Users\\CDantas\\Desktop\\JV training\\chromedriver.exe
 	  //Arrange
-//	  System.setProperty("webdriver.chrome.driver", "C:\\Users\\CDantas\\Desktop\\JV training\\chromedriver.exe");
-	 
 	  String url = "http://the-internet.herokuapp.com/";
 	  String expectedInput = "2";
 	  //Act
@@ -76,6 +76,8 @@ public class TheInternet {
   
   @BeforeClass
   public void beforeClass() {
+	  URL url = ClassLoader.getSystemResource("chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver", url.getFile());
 	  driver = new ChromeDriver();
   }
 

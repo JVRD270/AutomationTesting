@@ -9,8 +9,8 @@ public class InputPage extends PageObjectBase{
 		super(driver, url);
 	}
 		
-	@FindBy(css="input")
-	WebElement inputElement;
+//	@FindBy(css="input")
+//	WebElement inputElement;
 	
 	public InputPage navigate() {
 		super.navigate("/inputs");
@@ -18,9 +18,9 @@ public class InputPage extends PageObjectBase{
 	}
 	
 	public InputPage setInput(String expectedInput) {
-		driver
-		.findElement(By.cssSelector("input"))
-		.sendKeys(expectedInput);;
+		WebElement inputElement = driver.findElement(By.cssSelector("input"));
+		Input inputWrapped = new Input(inputElement);
+		inputWrapped.setText(expectedInput);
 		return this;
 	}
 		
