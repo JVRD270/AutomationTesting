@@ -1,5 +1,4 @@
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
+package framework;
 
 import java.net.URL;
 
@@ -7,6 +6,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import theInternet.pages.DropdownPage;
+import theInternet.pages.IndexPage;
+import theInternet.pages.InputPage;
 
 public class TheInternet {
 	WebDriver driver;
@@ -62,9 +67,9 @@ public class TheInternet {
   public void tc5CanSetAnInput() {
 	  //Arrange
 	  String url = "http://the-internet.herokuapp.com/";
-	  String expectedInput = "2";
+	  int expectedInput = 2;
 	  //Act
-	  String actualInput = new InputPage(driver, url)
+	  int actualInput = new InputPage(driver, url)
 			  						.navigate()
 			  						.setInput(expectedInput)
 			  						.getInput();
