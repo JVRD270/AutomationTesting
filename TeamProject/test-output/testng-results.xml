@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-06T10:48:50 CST" name="Default suite" finished-at="2020-11-06T10:48:53 CST" duration-ms="3275">
+  <suite started-at="2020-11-06T15:48:43 CST" name="Default suite" finished-at="2020-11-06T15:48:46 CST" duration-ms="3321">
     <groups>
     </groups>
-    <test started-at="2020-11-06T10:48:50 CST" name="Default test" finished-at="2020-11-06T10:48:53 CST" duration-ms="3275">
+    <test started-at="2020-11-06T15:48:43 CST" name="Default test" finished-at="2020-11-06T15:48:46 CST" duration-ms="3321">
       <class name="theInternet.tests.DropdownListTest">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:theInternet.tests.DropdownListTest@17a7f733]" started-at="2020-11-06T10:48:50 CST" name="beforeClass" finished-at="2020-11-06T10:48:51 CST" duration-ms="1301" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:theInternet.tests.DropdownListTest@68567e20]" started-at="2020-11-06T15:48:43 CST" name="beforeClass" finished-at="2020-11-06T15:48:44 CST" duration-ms="1361" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="tc4CanSelectDropdownListOption()[pri:0, instance:theInternet.tests.DropdownListTest@17a7f733]" started-at="2020-11-06T10:48:51 CST" name="tc4CanSelectDropdownListOption" finished-at="2020-11-06T10:48:52 CST" duration-ms="1360" status="PASS">
+        <test-method signature="tc4CanSelectDropdownListOption()[pri:0, instance:theInternet.tests.DropdownListTest@68567e20]" started-at="2020-11-06T15:48:44 CST" name="tc4CanSelectDropdownListOption" finished-at="2020-11-06T15:48:46 CST" duration-ms="1357" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tc4CanSelectDropdownListOption -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:theInternet.tests.DropdownListTest@17a7f733]" started-at="2020-11-06T10:48:52 CST" name="afterClass" finished-at="2020-11-06T10:48:53 CST" duration-ms="597" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:theInternet.tests.DropdownListTest@68567e20]" started-at="2020-11-06T15:48:46 CST" name="afterClass" finished-at="2020-11-06T15:48:46 CST" duration-ms="584" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

@@ -1,4 +1,4 @@
-package framework;
+package theInternet.tests;
 
 import java.net.URL;
 
@@ -9,18 +9,16 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import framework.TestBase;
 import theInternet.pages.DropdownPage;
 import theInternet.pages.IndexPage;
 import theInternet.pages.InputPage;
 
-public class TheInternet {
+public class TheInternet extends TestBase{
 	WebDriver driver;
 	
   @Test
   public void canLaunchChromeBrowser() {
-	  //C:\\Users\\CDantas\\Desktop\\JV training\\chromedriver.exe
-	  //Arrange
-//	  System.setProperty("webdriver.chrome.driver", "C:\\Users\\CDantas\\Desktop\\JV training\\chromedriver.exe");
 	 
 	  String url = "http://the-internet.herokuapp.com/";
 	  //Act
@@ -31,9 +29,6 @@ public class TheInternet {
   }
   @Test
   public void canNavigateToTheIndexPage() {
-	  //C:\\Users\\CDantas\\Desktop\\JV training\\chromedriver.exe
-	  //Arrange
-//	  System.setProperty("webdriver.chrome.driver", "C:\\Users\\CDantas\\Desktop\\JV training\\chromedriver.exe");
 	 
 	  String url = "http://the-internet.herokuapp.com/";
 	  String expectedPageTitle = "The Internet";
@@ -47,9 +42,6 @@ public class TheInternet {
   
   @Test
   public void tc4CanSelectDropdownListItem() {
-	  //C:\\Users\\CDantas\\Desktop\\JV training\\chromedriver.exe
-	  //Arrange
-//	  System.setProperty("webdriver.chrome.driver", "C:\\Users\\CDantas\\Desktop\\JV training\\chromedriver.exe");
 	 
 	  String url = "http://the-internet.herokuapp.com/";
 	  String expectedSelection = "Option 2";
