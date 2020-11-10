@@ -20,8 +20,6 @@ public class AddRemoveElementPage extends PageObjectBase{
 	@FindBy(css = "button:not(.added-manually)")
 	WebElement addButton;
 	
-	
-	
 	public AddRemoveElementPage navigate() {
 		super.navigate("/add_remove_elements/");
 		return this;
