@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="theInternet.tests.AddRemoveElementsTest">
+      <class name="theInternet.tests.BasicAuthTest">
         <methods>
+          <include name="canAuthenticate"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
-          <include name="CanDeleteElements"/>
         </methods>
-      </class> <!-- theInternet.tests.AddRemoveElementsTest -->
+      </class> <!-- theInternet.tests.BasicAuthTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
