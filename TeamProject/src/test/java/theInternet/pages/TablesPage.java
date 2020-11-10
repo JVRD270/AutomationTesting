@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import framework.PageObjectBase;
+import theInternet.foundation.tablesControl.TableControlExtension;
 
 public class TablesPage extends PageObjectBase{
 

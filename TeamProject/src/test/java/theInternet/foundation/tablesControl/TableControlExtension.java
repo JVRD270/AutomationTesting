@@ -1,4 +1,4 @@
-package theInternet.pages;
+package theInternet.foundation.tablesControl;
 
 import java.util.List;
 

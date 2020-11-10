@@ -1,4 +1,4 @@
-package theInternet.pages;
+package theInternet.foundation.tablesControl;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
