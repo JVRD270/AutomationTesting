@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-11T15:25:18 CST" name="Default suite" finished-at="2020-11-11T15:25:23 CST" duration-ms="4352">
+  <suite started-at="2020-11-11T15:51:46 CST" name="Default suite" finished-at="2020-11-11T15:51:51 CST" duration-ms="4969">
     <groups>
     </groups>
-    <test started-at="2020-11-11T15:25:18 CST" name="Default test" finished-at="2020-11-11T15:25:23 CST" duration-ms="4352">
-      <class name="theInternet.tests.KeyPressTest">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:theInternet.tests.KeyPressTest@175b9425]" started-at="2020-11-11T15:25:18 CST" name="beforeTest" finished-at="2020-11-11T15:25:21 CST" duration-ms="2921" status="PASS">
+    <test started-at="2020-11-11T15:51:46 CST" name="Default test" finished-at="2020-11-11T15:51:51 CST" duration-ms="4969">
+      <class name="theInternet.tests.DisappearingElementsTest">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:theInternet.tests.DisappearingElementsTest@175b9425]" started-at="2020-11-11T15:51:46 CST" name="beforeTest" finished-at="2020-11-11T15:51:48 CST" duration-ms="2909" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="recognizesPressedKey()[pri:0, instance:theInternet.tests.KeyPressTest@175b9425]" started-at="2020-11-11T15:25:21 CST" name="recognizesPressedKey" finished-at="2020-11-11T15:25:22 CST" duration-ms="900" status="PASS">
+        <test-method signature="canElementDisappear()[pri:0, instance:theInternet.tests.DisappearingElementsTest@175b9425]" started-at="2020-11-11T15:51:48 CST" name="canElementDisappear" finished-at="2020-11-11T15:51:50 CST" duration-ms="1521" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- recognizesPressedKey -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:theInternet.tests.KeyPressTest@175b9425]" started-at="2020-11-11T15:25:22 CST" name="afterTest" finished-at="2020-11-11T15:25:23 CST" duration-ms="517" status="PASS">
+        </test-method> <!-- canElementDisappear -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:theInternet.tests.DisappearingElementsTest@175b9425]" started-at="2020-11-11T15:51:50 CST" name="afterTest" finished-at="2020-11-11T15:51:51 CST" duration-ms="522" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- theInternet.tests.KeyPressTest -->
+      </class> <!-- theInternet.tests.DisappearingElementsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
