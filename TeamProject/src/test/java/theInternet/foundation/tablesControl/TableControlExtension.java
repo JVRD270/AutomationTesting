@@ -6,15 +6,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class TableControlExtension {
+import theInternet.foundation.ControlExtensionBase;
 
-	private WebElement mappedElement;
-	private WebDriver driver;
+public class TableControlExtension extends ControlExtensionBase{
+
 	private By columnHeaderLocator = By.cssSelector("thead th");
 	private By rowLocator = By.cssSelector("tbody tr");
 	
 	
 	public TableControlExtension(WebElement mappedElement, WebDriver driver) {
+		super(mappedElement, driver);
 		this.mappedElement = mappedElement;
 		this.driver = driver;
 	}

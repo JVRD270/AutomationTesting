@@ -3,10 +3,11 @@ package theInternet.foundation.tablesControl;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class TableCellControlExtension {
-	private WebElement mappedElement;
+import theInternet.foundation.ControlExtensionBase;
+
+public class TableCellControlExtension extends ControlExtensionBase{
 	public TableCellControlExtension(WebElement mappedElement, WebDriver driver) {
-		this.mappedElement = mappedElement;
+		super(mappedElement, driver);
 	}
 	
 	public String getText() {
