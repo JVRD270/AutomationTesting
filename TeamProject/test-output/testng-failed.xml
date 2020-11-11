@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="theInternet.tests.BasicAuthTest">
+      <class name="theInternet.tests.KeyPressTest">
         <methods>
-          <include name="canAuthenticate"/>
+          <include name="recognizesPressedKey"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
         </methods>
-      </class> <!-- theInternet.tests.BasicAuthTest -->
+      </class> <!-- theInternet.tests.KeyPressTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
