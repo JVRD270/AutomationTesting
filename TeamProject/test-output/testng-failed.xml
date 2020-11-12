@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="theInternet.tests.HorizontalSliderTest">
+      <class name="theInternet.tests.JavaScriptAlertsTest">
         <methods>
           <include name="afterTest"/>
-          <include name="canMoveSlider"/>
           <include name="beforeTest"/>
+          <include name="canSendPromptAlert"/>
         </methods>
-      </class> <!-- theInternet.tests.HorizontalSliderTest -->
+      </class> <!-- theInternet.tests.JavaScriptAlertsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

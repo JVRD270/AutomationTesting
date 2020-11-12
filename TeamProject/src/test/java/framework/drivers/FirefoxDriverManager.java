@@ -1,5 +1,6 @@
-package theInternet.foundation.drivers;
+package framework.drivers;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class FirefoxDriverManager extends DriverManager {
@@ -8,9 +9,9 @@ public class FirefoxDriverManager extends DriverManager {
 		super("geckodriver.exe", "webdriver.gecko.driver");
 	}
 
-	public FirefoxDriver getDriver() {
+	public WebDriver getDriver() {
 		super.webDriver = new FirefoxDriver();
-		return (FirefoxDriver) super.webDriver;
+		return super.webDriver;
 	}
 
 }

@@ -24,12 +24,13 @@ public class DisappearingElementsPage extends PageObjectBase{
 		return this;
 	}
 	
-	public DisappearingElementsPage reloadAndCheckForElement(int reloadThisManyTimes) {
+	public DisappearingElementsPage reloadAndCheckForElement() {
 		int currentNumberOfLi = liElements.size();
-		for(int i=0;i<=reloadThisManyTimes;i++) {
+		for(int i=0;i<=100;i++) {
 			navigate();
 			if(currentNumberOfLi != liElements.size()) {
 				elementDisappearsAtLeastOnce = true;
+				break;
 			}
 			
 		}
