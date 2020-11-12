@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="theInternet.tests.KeyPressTest">
+      <class name="theInternet.tests.HorizontalSliderTest">
         <methods>
-          <include name="recognizesPressedKey"/>
-          <include name="beforeTest"/>
           <include name="afterTest"/>
+          <include name="canMoveSlider"/>
+          <include name="beforeTest"/>
         </methods>
-      </class> <!-- theInternet.tests.KeyPressTest -->
+      </class> <!-- theInternet.tests.HorizontalSliderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
