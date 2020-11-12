@@ -2,14 +2,14 @@ package theInternet.tests;
 
 import org.testng.annotations.Test;
 
-import framework.TestBase;
+import theInternet.foundation.TheInternetTestBase;
 import theInternet.pages.KeyPressPage;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 
-public class KeyPressTest extends TestBase{
+public class KeyPressTest extends TheInternetTestBase{
   @Test
   public void recognizesPressedKey() {
 	  String textInput = "sdiujowijdpqow"; //checks if we can detect each character and reassemble string from web page
@@ -18,7 +18,9 @@ public class KeyPressTest extends TestBase{
 			  .pressAndRecordKeysIntoString(textInput)
 			  .getRecordedKeys();
 	  
-	  Assert.assertEquals(detectedKeyInputs, textInput.toUpperCase());
+	  String expectedIdentifiedText = textInput.toUpperCase();
+	  
+	  Assert.assertEquals(detectedKeyInputs, expectedIdentifiedText);
 	  //must be uppercase, since we are detecting keys
   }
   @BeforeTest

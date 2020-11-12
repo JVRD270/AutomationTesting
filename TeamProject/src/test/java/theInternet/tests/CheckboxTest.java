@@ -2,14 +2,14 @@ package theInternet.tests;
 
 import org.testng.annotations.Test;
 
-import framework.TestBase;
+import theInternet.foundation.TheInternetTestBase;
 import theInternet.pages.CheckboxPage;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 
-public class CheckboxTest extends TestBase{
+public class CheckboxTest extends TheInternetTestBase{
   @Test
   public void canToggleCheckbox() {
 	  String[] boxesToToggle = {"checkbox 1", "checkbox 2"};

@@ -2,13 +2,13 @@ package theInternet.tests;
 
 import org.testng.annotations.Test;
 
-import framework.TestBase;
+import theInternet.foundation.TheInternetTestBase;
 import theInternet.pages.BasicAuthPage;
 import org.testng.annotations.BeforeTest;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 
-public class BasicAuthTest extends TestBase {
+public class BasicAuthTest extends TheInternetTestBase {
   @Test
   public void canAuthenticate() {
 	  String username = "admin";

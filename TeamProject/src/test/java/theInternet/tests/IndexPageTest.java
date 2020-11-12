@@ -6,10 +6,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import framework.TestBase;
+import theInternet.foundation.TheInternetTestBase;
 import theInternet.pages.IndexPage;
 
-public class IndexPageTest extends TestBase{
+public class IndexPageTest extends TheInternetTestBase{
 	WebDriver driver;
 	
   @Test
