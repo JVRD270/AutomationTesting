@@ -1,10 +1,12 @@
 package framework;
 
 import java.io.IOException;
+
 import java.util.HashMap;
 
 import org.openqa.selenium.WebDriver;
-import theInternet.foundation.drivers.DriverManagerFactory;
+
+import framework.drivers.DriverManagerFactory;
 
 
 
@@ -22,7 +24,7 @@ public abstract class TestBase {
 	}
 	
 	private void LoadConfigurations() {
-		this.webDriver = DriverManagerFactory.getManager("Firefox").getDriver();
+		this.webDriver = DriverManagerFactory.getManager("Chrome").getDriver();
 		
 		HashMap<String, String> configs = null;
 		

@@ -1,5 +1,6 @@
-package theInternet.foundation.drivers;
+package framework.drivers;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ChromeDriverManager extends DriverManager {
@@ -8,8 +9,8 @@ public class ChromeDriverManager extends DriverManager {
 		super("chromedriver.exe", "webdriver.chrome.driver");
 	}
 
-	public ChromeDriver getDriver() {
+	public WebDriver getDriver() {
 		super.webDriver = new ChromeDriver();
-		return (ChromeDriver) super.webDriver;
+		return super.webDriver;
 	}
 }

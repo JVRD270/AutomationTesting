@@ -12,11 +12,10 @@ import org.testng.annotations.AfterTest;
 public class DisappearingElementsTest extends TheInternetTestBase {
 	@Test
 	public void canElementDisappear() {
-		//Tests if element disappears at least once with a set number of page reloads
-		int numberOfPageReloads = 5;
+		//Checks if an element disappears from the page. Stops whenever an element disappears. Limit = 100 reloads.
 		boolean didElementDisappear = new DisappearingElementsPage(webDriver, baseUrl)
 				.navigate()
-				.reloadAndCheckForElement(numberOfPageReloads)
+				.reloadAndCheckForElement()
 				.disappearedAtLeastOnce();
 		
 		Assert.assertTrue(didElementDisappear);
