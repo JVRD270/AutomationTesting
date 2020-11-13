@@ -7,7 +7,6 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
-import API.DeserializeSingleUser.User;
 import io.restassured.RestAssured;
 import io.restassured.response.ResponseBody;
 

@@ -3,17 +3,12 @@ package API;
 import org.testng.annotations.Test;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import io.restassured.RestAssured;
 import io.restassured.response.ResponseBody;
 
 import org.testng.annotations.BeforeTest;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import org.testng.annotations.AfterTest;
 
