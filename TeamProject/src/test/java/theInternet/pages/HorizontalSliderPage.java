@@ -32,7 +32,6 @@ public class HorizontalSliderPage extends PageObjectBase{
 		HorizontalSliderControlExtension sliderController = new HorizontalSliderControlExtension(slider, driver);
 		for(double position : positions) {
 			sliderController.moveTo(position);
-			Thread.sleep(100);
 			detectedValuesText.add(outputText.getText());
 		}
 
