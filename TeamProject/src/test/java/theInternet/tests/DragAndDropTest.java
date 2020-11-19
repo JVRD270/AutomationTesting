@@ -18,7 +18,9 @@ public class DragAndDropTest extends TheInternetTestBase {
 	  
 	  String actualLabel = testPage
 			  .navigate()
-			  .dragLeftToRight()
+			  .dragBoxIntoAnother("B", "A")
+			  .dragBoxIntoAnother("B", "A")
+			  .dragBoxIntoAnother("A", "B")
 			  .getLeftBoxLabel();
 	  
 	  Assert.assertEquals(actualLabel, expectedLabel);

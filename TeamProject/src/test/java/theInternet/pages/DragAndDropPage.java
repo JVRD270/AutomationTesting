@@ -3,11 +3,7 @@ package theInternet.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import framework.PageObjectBase;
 
 public class DragAndDropPage extends PageObjectBase {
@@ -15,9 +11,7 @@ public class DragAndDropPage extends PageObjectBase {
 	public DragAndDropPage(WebDriver driver, String url) {
 		super(driver, url);
 	}
-	
-	
-	
+		
 	public DragAndDropPage navigate() {
 		super.navigate("/drag_and_drop");
 		return this;
@@ -28,28 +22,34 @@ public class DragAndDropPage extends PageObjectBase {
 	
 	@FindBy(css="#column-b")
 	WebElement columnB;
-	
-	private By leftBoxLabel = By.cssSelector("#column-a header");
-	private By rightBoxLabel = By.cssSelector("#column-b header");
-	Actions actions = new Actions(driver);
-	WebDriverWait wait = new WebDriverWait(driver, 1);
-	
+		
 
-	public DragAndDropPage dragLeftToRight() {
-		actions.clickAndHold(columnA).moveToElement(columnB).release(columnB).build().perform();
+	public DragAndDropPage dragBoxIntoAnother(String sourceBoxHeader, String targetBoxHeader) {
+		javaScriptDragAndDrop(getBoxByHeader(sourceBoxHeader), getBoxByHeader(targetBoxHeader));
 		return this;
 	}
-	
+
+	public WebElement getBoxByHeader(String header) {
+		if(getLeftBoxLabel().equals(header)) {
+			return columnA;
+		}
+		if(getRightBoxLabel().equals(header)) {
+			return columnB;
+		}
+		
+		throw new RuntimeException("Label invalid");
+	}
+
 	public String getLeftBoxLabel() {
-		wait.until(ExpectedConditions.textToBe(leftBoxLabel, "B"));
-		String actualLabel = driver.findElement(leftBoxLabel).getText();
-		return actualLabel;
+		String label = columnA.findElement(By.tagName("header")).getText();
+		return label;
 	}
 
 	public String getRightBoxLabel() {
-		wait.until(ExpectedConditions.textToBe(rightBoxLabel, "A"));
-		String actualLabel = columnB.findElement(By.tagName("header")).getText();
-		return actualLabel;
+		String label = columnB.findElement(By.tagName("header")).getText();
+		return label;
 	}
+
+	
 	
 }
