@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import framework.PageObjectBase;
-import theInternet.foundation.EmailManager;
+import theInternet.foundation.EmailManager.EmailManager;
 
 public class ForgotPWPage extends PageObjectBase {
 	public ForgotPWPage(WebDriver driver, String url) {

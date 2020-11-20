@@ -1,4 +1,4 @@
-package theInternet.foundation;
+package theInternet.foundation.EmailManager;
 
 import java.util.ArrayList;
 import java.util.List;

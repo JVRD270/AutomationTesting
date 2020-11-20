@@ -1,6 +1,5 @@
 package theInternet.tests;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -10,16 +9,7 @@ import theInternet.foundation.TheInternetTestBase;
 import theInternet.pages.IndexPage;
 
 public class IndexPageTest extends TheInternetTestBase{
-	WebDriver driver;
 	
-  @Test
-  public void canLaunchChromeBrowser() {
-	 //Act
-	  webDriver.navigate().to(baseUrl);
-	  String currentURL = driver.getCurrentUrl();
-	  //Assert
-	  Assert.assertEquals(currentURL, baseUrl);
-  }
   @Test
   public void canNavigateToTheIndexPage() {
 	 

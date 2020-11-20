@@ -15,6 +15,7 @@ public class ForgotPWTest extends TheInternetTestBase {
 	  //This test uses a free disposable email service called endtest.io.
 	  //We can use a sample email username@endtest-mail.io
 	  //The inbox can be accessed at https://endtest.io/mailbox?email=username@endtest-mail.io
+	  //The test takes 30 seconds. EndTest's documentation asks for that timeout for the e-mail to arrive.
 	  String sampleEmail = "brand_new_email@endtest-mail.io";
 	  String expectedEmailTitle ="Forgot Password from the-internet";
 	  String emailReceivedTitle = new ForgotPWPage(webDriver, baseUrl)
