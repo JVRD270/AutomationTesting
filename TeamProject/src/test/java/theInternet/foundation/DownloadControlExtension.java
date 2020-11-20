@@ -8,7 +8,7 @@ import java.util.List;
 import org.openqa.selenium.WebDriver;
 
 public class DownloadControlExtension {
-	WebDriver driver;
+	protected WebDriver driver;
 
 	
 	public DownloadControlExtension(WebDriver driver) {
@@ -48,8 +48,8 @@ public class DownloadControlExtension {
 	    File dir = new File(downloadPath);
 	    File[] dir_contents = dir.listFiles();
 	  	    
-	    for (int i = 0; i < dir_contents.length; i++) {
-	        if (dir_contents[i].getName().contains(fileName.substring(0, fileName.indexOf("."))))
+	    for (int i = 0; i < dir_contents.length;) {
+	        if (dir_contents[i].getName().equals(fileName.substring(0,fileName.indexOf(".")-1)));
 	            return flag=true;
 	            }
 

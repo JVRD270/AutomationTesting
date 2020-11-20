@@ -24,7 +24,7 @@ public abstract class TestBase {
 	}
 	
 	private void LoadConfigurations() {
-		this.webDriver = DriverManagerFactory.getManager("Firefox").getDriver();
+		this.webDriver = DriverManagerFactory.getManager("Chrome").getDriver();
 		
 		HashMap<String, String> configs = null;
 		
