@@ -23,16 +23,14 @@ public class getInventoryIDsForAlienCenterTest extends MySQLTestBase {
 				filmId = rs.getInt(1);
 			}
 			
-			String getFilmCountQuery = "{? = CALL sakila.film_in_stock(?, ?)}";
+			String getFilmCountQuery = "{CALL film_in_stock(?, ?, ?)}";
 			CallableStatement cstmt = con.prepareCall(getFilmCountQuery);
-			cstmt.registerOutParameter(1, Types.INTEGER);
-			cstmt.setInt(2, filmId);
-			cstmt.setInt(3, 2);
-			ResultSet queryExecution = cstmt.executeQuery(getFilmCountQuery);
+			cstmt.setInt(1, filmId);
+			cstmt.setInt(2, 2);
+			cstmt.registerOutParameter(3, java.sql.Types.INTEGER);
+			cstmt.execute();
 			int filmCount = cstmt.getInt(3);
-			System.out.println(filmCount);
-			while(queryExecution.next())  
-				System.out.println(queryExecution.getInt(1));  
+			System.out.println(filmCount); 
 		}
 		catch(Exception e) {
 			System.out.println(e);
