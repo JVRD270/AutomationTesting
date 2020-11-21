@@ -1,6 +1,5 @@
 package theInternet.pages;
 
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,39 +13,32 @@ public class DownloadsPage extends PageObjectBase{
 	public DownloadsPage(WebDriver driver, String baseUrl) {
 		super(driver, baseUrl);
 	}
-	
+
 	List<String> fileNames = new ArrayList<String>();
 
-	
+
 	@FindBy(css=".example a")
 	List<WebElement> downloadLinks;
-	
+
 	public DownloadsPage navigate() {
 		super.navigate("/download");
 		return this;
 	}
+
+	public DownloadControlExtension downloadFileByIndex(int indexOfFile) {
+		WebElement linkToClick = downloadLinks.get(indexOfFile);
+		linkToClick.click();
+		return new DownloadControlExtension(driver, linkToClick.getText());
+	}
+
 	
-	public List<String> getAvailableFileNames(){
-		for(WebElement link : downloadLinks) {
-			fileNames.add(link.getText());
-		}
-		
-		return fileNames;
+	public String getFileNameByIndex(int indexOfFile) {
+		return downloadLinks.get(indexOfFile).getText();
 	}
 	
-	public DownloadsPage downloadAllFiles() {
-		for(WebElement link : downloadLinks) {
-			link.click();
-		}
-		return this;
-	}
-	
-	public List<String> getDownloaded() throws FileNotFoundException, InterruptedException{
-		return new DownloadControlExtension(driver).findFiles(fileNames);
-	}
-	
-	
-	
-	
+
+
+
+
 
 }

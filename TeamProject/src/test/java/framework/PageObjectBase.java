@@ -17,6 +17,7 @@ public abstract class PageObjectBase {
 	}
 	
 	
+	
 	protected void navigate(String extension) {
 		driver.navigate().to(baseUrl + extension);
 	}
