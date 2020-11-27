@@ -27,7 +27,7 @@ public class ExitIntentPage extends PageObjectBase {
 	public ExitIntentPage tryToLeave() {
 		try {
 			Robot robot = new Robot();
-			robot.mouseMove(100, 100);
+			robot.mouseMove(500, 500);
 			robot.mouseMove(50, 0);
 		} catch (AWTException e) {
 			e.printStackTrace();

@@ -3,7 +3,6 @@ package mySQL;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 

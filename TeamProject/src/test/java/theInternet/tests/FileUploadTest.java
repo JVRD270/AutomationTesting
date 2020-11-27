@@ -12,7 +12,7 @@ import org.testng.annotations.AfterTest;
 public class FileUploadTest extends TheInternetTestBase {
   @Test
   public void canUploadFiles() {
-	  String expectedUploadedFile = "C:\\Users\\jvict\\Desktop\\Personal\\footpedia\\img\\download.png";
+	  String expectedUploadedFile = "C:\\Users\\jvict\\Desktop\\test.txt";
 	  String fileName = expectedUploadedFile.substring(expectedUploadedFile.lastIndexOf("\\")+1);
 	  String uploadedFile = new UploadFilesPage(webDriver, baseUrl)
 			  .navigate()
