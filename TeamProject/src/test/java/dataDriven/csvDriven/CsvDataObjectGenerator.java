@@ -58,8 +58,8 @@ public class CsvDataObjectGenerator {
 		throw new Exception();
 	}
 
-	public UserData getUserByIndex(int lineToReadIndex) {
-		return users.get(lineToReadIndex);
+	public List<UserData> getUsers() {
+		return users;
 	}
 
 }

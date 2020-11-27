@@ -1,4 +1,4 @@
-package dataDriven.csvDriven;
+package dataDriven.XMLDriven;
 
 import org.testng.annotations.Test;
 
@@ -12,12 +12,11 @@ import java.util.List;
 
 import org.testng.annotations.AfterTest;
 
-public class CsvDriven extends TestBase{
-	@Test
-	public void canRegisterStudentFromCsv() throws Exception {	
-		
-			List<UserData> studentsToRegister = new CsvDataObjectGenerator("src/test/resources/Students.csv")
-					.makeDataObjectsFromCsv()
+public class XMLDriven extends TestBase {
+  @Test
+  public void canRegisterStudentFromXml() throws Exception {
+			List<UserData> studentsToRegister = new XmlDataObjectGenerator("src/test/resources/Students.xml")
+					.makeDataObjectsFromXml()
 					.getUsers();
 			
 			for(UserData student : studentsToRegister) {
@@ -25,16 +24,16 @@ public class CsvDriven extends TestBase{
 			System.out.println(registeredStudent);
 			}
 	}
+  
+  @BeforeTest
+  public void beforeTest() {
+	  super.beforeTest();
+  }
 
-
-	@BeforeTest
-	public void beforeTest() {
-		super.beforeTest();
-	}
-
-	@AfterTest
-	public void afterTest() {
-		super.afterTest();
-	}
+  @AfterTest
+  public void afterTest() {
+	  super.afterTest();
+  }
 
 }
+

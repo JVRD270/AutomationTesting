@@ -71,7 +71,7 @@ public class TestFormFiller {
 	public void setSubjects() {
 		for(String subject : user.subjects) {
 			userForm.findElement(By.id("subjectsInput")).sendKeys(subject);
-			userForm.findElement(By.id("subjectsInput")).sendKeys(Keys.ENTER);
+			userForm.findElement(By.id("subjectsInput")).sendKeys(Keys.TAB);
 		}
 	}
 
