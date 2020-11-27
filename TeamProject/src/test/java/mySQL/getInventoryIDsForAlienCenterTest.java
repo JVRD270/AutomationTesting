@@ -6,8 +6,6 @@ import org.testng.annotations.BeforeTest;
 import java.sql.CallableStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.sql.Types;
-
 import org.testng.annotations.AfterTest;
 
 public class getInventoryIDsForAlienCenterTest extends MySQLTestBase {

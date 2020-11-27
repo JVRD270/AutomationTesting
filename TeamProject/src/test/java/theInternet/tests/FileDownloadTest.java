@@ -16,7 +16,7 @@ public class FileDownloadTest extends TheInternetTestBase{
   public void canDownloadFiles() throws FileNotFoundException, InterruptedException {
 	  DownloadsPage myDownloadPage = new DownloadsPage(webDriver, baseUrl);
 	  
-	  int indexOfFileToDownload = 0;
+	  int indexOfFileToDownload = 4;
 	  String expectedDownloadedFile = myDownloadPage.navigate().getFileNameByIndex(indexOfFileToDownload);
 	  
 	  String downloadedFile = myDownloadPage.navigate()
