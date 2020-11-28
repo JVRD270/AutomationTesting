@@ -23,7 +23,7 @@ public class UserData{
 	public UserData(HashMap<String,String> data) throws ParseException{		
 		this.firstName = data.get("lastFirst").contains(",") ? data.get("lastFirst").split(",")[1] : null;
 		this.lastName = data.get("lastFirst").split(",")[0];
-		this.DOB = formatDate(data.get("dob"));
+		this.DOB = data.get("dob");
 		this.email = data.get("email") != null ? data.get("email") : "a@a.com";
 		this.houseNumber = data.get("houseNumber");
 		this.street = data.get("street");
@@ -34,20 +34,6 @@ public class UserData{
 		this.gender = data.get("gender");
 		this.subjects = data.get("subjects") != null ? data.get("subjects").split(";") : new String[] {""};
 		this.hobby = data.get("hobby");
-	}
-
-	public String formatDate(String date) throws ParseException {
-		String formattedDate;
-		if (date.length() == 10) {
-			formattedDate = new SimpleDateFormat("dd MMM yyyy").format(new SimpleDateFormat("MM/dd/yyyy").parse(date));
-		}
-		else if (date.length() == 11) {
-			formattedDate = new SimpleDateFormat("dd MMM yyyy").format(new SimpleDateFormat("MMM dd yyyy").parse(date));
-		}
-		else {
-			formattedDate = new SimpleDateFormat("dd MMM yyyy").format(new SimpleDateFormat("M/d/yyyy").parse(date));
-		}
-		return formattedDate;
 	}
 
 }
