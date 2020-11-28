@@ -3,6 +3,7 @@ package dataDriven;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,11 +12,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ReactDropdownControlExtension {
 	private WebElement mappedElement;
-	private WebDriver driver;
 
-	public ReactDropdownControlExtension(WebElement mappedElement, WebDriver driver) {
+
+	public ReactDropdownControlExtension(WebElement mappedElement) {
 		this.mappedElement = mappedElement;
-		this.driver = driver;
+
 	}
 
 	//use this one
@@ -44,7 +45,7 @@ public class ReactDropdownControlExtension {
 
 	private void waitForCollapsed() {
 		// not implemented		
-		new WebDriverWait(driver, 3).until(ExpectedConditions.invisibilityOfAllElements(mappedElement.findElements(By.cssSelector("div[class$='-option']"))));
+		
 	}
 
 	private List<WebElement> getOptions() {
@@ -55,13 +56,12 @@ public class ReactDropdownControlExtension {
 	}
 
 	private void expand() {
-		WebElement expandIcon = mappedElement.findElement(By.cssSelector("div[class$='css-tlfecz-indicatorContainer']"));
+		WebElement expandIcon = mappedElement.findElement(By.cssSelector(".css-2b097c-container .css-19bqh2r"));
 		expandIcon.click();
 		waitForExpanded();
 	}
 
 	private void waitForExpanded() {
 		// not implemented
-		new WebDriverWait(driver, 3).until(ExpectedConditions.visibilityOfAllElements(mappedElement.findElements(By.cssSelector("div[class$='-option']"))));
 	}	
 }
