@@ -60,16 +60,8 @@ public class TestFormFiller {
 
 	public void setBirthDate() {
 		By dateOfBirthLocator = By.id("dateOfBirthInput");
-		
-		String currentDateText = userForm.findElement(dateOfBirthLocator).getAttribute("value");
-		for (int i=1; i<currentDateText.length(); i++) {
-			userForm.findElement(dateOfBirthLocator).sendKeys(Keys.BACK_SPACE);
-		}
+		userForm.findElement(dateOfBirthLocator).sendKeys(Keys.chord(Keys.CONTROL, "A"));
 		userForm.findElement(dateOfBirthLocator).sendKeys(user.DOB);
-		for (int i=-1; i<currentDateText.length(); i++) {
-			userForm.findElement(dateOfBirthLocator).sendKeys(Keys.ARROW_LEFT);
-		}
-		userForm.findElement(dateOfBirthLocator).sendKeys(Keys.DELETE);
 		userForm.findElement(dateOfBirthLocator).sendKeys(Keys.ESCAPE);
 	}
 
