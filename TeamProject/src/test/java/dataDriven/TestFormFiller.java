@@ -23,6 +23,7 @@ public class TestFormFiller {
 
 
 	public void submitAllData() {
+		driver.manage().window().maximize();
 		fillName();
 		selectGender();
 		fillMobile();
@@ -58,21 +59,26 @@ public class TestFormFiller {
 	}
 
 	public void setBirthDate() {
-		String currentDateText = userForm.findElement(By.id("dateOfBirthInput")).getAttribute("value");
+		By dateOfBirthLocator = By.id("dateOfBirthInput");
+		
+		String currentDateText = userForm.findElement(dateOfBirthLocator).getAttribute("value");
 		for (int i=1; i<currentDateText.length(); i++) {
-			userForm.findElement(By.id("dateOfBirthInput")).sendKeys(Keys.BACK_SPACE);
+			userForm.findElement(dateOfBirthLocator).sendKeys(Keys.BACK_SPACE);
 		}
-		userForm.findElement(By.id("dateOfBirthInput")).sendKeys(user.DOB);
+		userForm.findElement(dateOfBirthLocator).sendKeys(user.DOB);
 		for (int i=-1; i<currentDateText.length(); i++) {
-			userForm.findElement(By.id("dateOfBirthInput")).sendKeys(Keys.ARROW_LEFT);
+			userForm.findElement(dateOfBirthLocator).sendKeys(Keys.ARROW_LEFT);
 		}
-		userForm.findElement(By.id("dateOfBirthInput")).sendKeys(Keys.DELETE);
+		userForm.findElement(dateOfBirthLocator).sendKeys(Keys.DELETE);
+		userForm.findElement(dateOfBirthLocator).sendKeys(Keys.ESCAPE);
 	}
 
 	public void setSubjects() {
+		By subjectInputLocator = By.id("subjectsInput");
+		
 		for(String subject : user.subjects) {
-			userForm.findElement(By.id("subjectsInput")).sendKeys(subject);
-			userForm.findElement(By.id("subjectsInput")).sendKeys(Keys.TAB);
+			userForm.findElement(subjectInputLocator).sendKeys(subject);
+			userForm.findElement(subjectInputLocator).sendKeys(Keys.TAB);
 		}
 	}
 
@@ -96,7 +102,7 @@ public class TestFormFiller {
 
 	public void selectState() {
 		ReactDropdownControlExtension stateMenu = new ReactDropdownControlExtension(
-				userForm.findElement(By.className("css-yk16xz-control")), driver);
+				userForm.findElement(By.className("css-yk16xz-control")));
 
 		stateMenu.selectByText(user.state);
 	}
