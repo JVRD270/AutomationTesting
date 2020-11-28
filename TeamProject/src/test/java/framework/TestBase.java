@@ -24,7 +24,6 @@ public abstract class TestBase {
 	}
 	
 	private void LoadConfigurations() {
-		this.webDriver = DriverManagerFactory.getManager("Chrome").getDriver();
 		
 		HashMap<String, String> configs = null;
 		
@@ -36,6 +35,7 @@ public abstract class TestBase {
 		}
 		
 		this.baseUrl = configs.get(ConfigurationParameters.Url);
+		this.webDriver = DriverManagerFactory.getManager(configs.get(ConfigurationParameters.Browser)).getDriver();
 	}
 	
 }
