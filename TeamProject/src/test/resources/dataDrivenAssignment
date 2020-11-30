@@ -1,0 +1,7 @@
+https://demoqa.com/automation-practice-form
+
+Register 12 students using this form.
+Test 1 (3 students) - Get the data from a CSV file. Ideally you will read the data into value objects (POJOs). src/test/java/dataDriven/CsvDriven.java
+Test 2 (3 students) - Take a collection of Data Provider Objects passed into the test. src/test/java/fileOperations/dataDriven/ParameterDriven.java
+Test 3 (3 students) - Get the data from a XML file. Ideally you will read the data into value objects (POJOs). src/test/java/dataDriven/XmlDriven.java
+Test 3 (3 students) - Get the data from a database table. Use the DB Query to insert the data. src/test/java/dataDriven/DbDriven.java

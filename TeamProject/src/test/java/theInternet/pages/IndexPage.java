@@ -18,5 +18,5 @@ public class IndexPage extends PageObjectBase {
 	public String getTitle() {
 		return driver.getTitle();
 		}
-	
+
 }

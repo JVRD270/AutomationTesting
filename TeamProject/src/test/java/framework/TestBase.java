@@ -1,15 +1,17 @@
 package framework;
 
 import java.io.IOException;
-import java.net.URL;
+
 import java.util.HashMap;
 
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
+
+import framework.drivers.DriverManagerFactory;
 
 
 
 public abstract class TestBase {
-	protected ChromeDriver webDriver;
+	protected WebDriver webDriver;
 	protected String baseUrl;
 	
 	protected void beforeTest() {
@@ -22,10 +24,6 @@ public abstract class TestBase {
 	}
 	
 	private void LoadConfigurations() {
-		URL url = ClassLoader.getSystemResource("chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", url.getFile());
-		
-		this.webDriver = new ChromeDriver();
 		
 		HashMap<String, String> configs = null;
 		
@@ -37,6 +35,7 @@ public abstract class TestBase {
 		}
 		
 		this.baseUrl = configs.get(ConfigurationParameters.Url);
+		this.webDriver = DriverManagerFactory.getManager(configs.get(ConfigurationParameters.Browser)).getDriver();
 	}
 	
 }
