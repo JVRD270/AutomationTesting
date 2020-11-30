@@ -18,6 +18,11 @@ public class HorizontalSliderControlExtension extends ControlExtensionBase{
 	}
 
 	public HorizontalSliderControlExtension moveTo(double value){
+		if (value < minValue || value > maxValue) {
+			throw new ArithmeticException("The entered value is not in the acceptable range");
+		}
+		
+		
 		int numberOfSteps = (int) Math.abs((value - currentValue)/step);
 		if (value < currentValue) {
 			for(int i=1;i<=numberOfSteps;i++) {

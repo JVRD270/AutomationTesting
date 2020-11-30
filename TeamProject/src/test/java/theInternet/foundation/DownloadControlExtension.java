@@ -3,6 +3,7 @@ package theInternet.foundation;
 import java.io.File;
 import java.io.FileNotFoundException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DownloadControlExtension {
 	protected WebDriver driver;
@@ -21,15 +22,7 @@ public class DownloadControlExtension {
 
 
 	public String findFile(String fileName) throws FileNotFoundException, InterruptedException{
-		boolean wasFileFound = isFileDownloaded(getDownloadsDirectory(), fileName);
-		long startTime = System.currentTimeMillis();
-		while(!wasFileFound) {
-			Thread.sleep(50);
-			wasFileFound = isFileDownloaded(getDownloadsDirectory(), fileName);
-			if (System.currentTimeMillis() - startTime > 2000) {
-				throw new FileNotFoundException("File " + fileName + " not found");
-			}
-		}
+		new WebDriverWait(driver, 5).until(d -> isFileDownloaded(getDownloadsDirectory(), fileName));
 		deleteFileFromDownloadDirectory(getDownloadsDirectory(), fileName);
 		return fileName;
 	}

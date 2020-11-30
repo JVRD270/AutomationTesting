@@ -6,6 +6,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class EmailManager {
 	String inboxBaseUrl = "https://endtest.io/mailbox?email=";
@@ -18,9 +19,14 @@ public class EmailManager {
 	}
 
 	public EmailManager openInbox(String emailAddress) throws InterruptedException {
-		Thread.sleep(30000); //wait for the email to arrive, the documentation asks for 30 secs
 		driver.get(inboxBaseUrl + emailAddress);
 		emails = driver.findElements(emailLocator);
+		int currentNumberOfEmails = emails.size();
+		new WebDriverWait(driver, 30).until(d -> {
+			driver.navigate().refresh();
+			emails = driver.findElements(emailLocator);
+			return emails.size() != currentNumberOfEmails;
+					});
 		return this;
 	}
 	

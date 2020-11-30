@@ -24,6 +24,7 @@ public class IFramePage extends PageObjectBase{
 	public IFramePage insertTextIntoIFrame(String input) {
 		driver.switchTo().frame(driver.findElement(By.cssSelector("#mce_0_ifr")));
 		driver.findElement(By.cssSelector("body")).sendKeys(input);
+		driver.switchTo().defaultContent();
 		return this;
 	}
 	

@@ -26,8 +26,8 @@ public class AddRemoveElementPage extends PageObjectBase{
 	}
 	
 	
-	public AddRemoveElementPage addElements(int howManyClicks) {
-		for(int i=0;i<howManyClicks; i++) {
+	public AddRemoveElementPage addElements(int elementsToAdd) {
+		for(int i=0;i<elementsToAdd; i++) {
 			addButton.click();
 		}
 		removeButtons = driver.findElements(removeButtonLocator);

@@ -15,7 +15,7 @@ public class DisappearingElementsTest extends TheInternetTestBase {
 		//Checks if an element disappears from the page. Stops whenever an element disappears. Limit = 100 reloads.
 		boolean didElementDisappear = new DisappearingElementsPage(webDriver, baseUrl)
 				.navigate()
-				.reloadAndCheckForElement()
+				.reloadAndCheckForElement(100)
 				.disappearedAtLeastOnce();
 		
 		Assert.assertTrue(didElementDisappear);
