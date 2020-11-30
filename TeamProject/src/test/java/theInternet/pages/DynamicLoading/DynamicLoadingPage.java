@@ -16,12 +16,12 @@ public class DynamicLoadingPage extends PageObjectBase {
 	}
 	
 	public HiddenElementPage goToHiddenElementExample() {
-		driver.findElement(By.partialLinkText("Example 1")).click();
+		driver.findElement(By.linkText("Example 1: Element on page that is hidden")).click();
 		return new HiddenElementPage(driver, baseUrl);
 	}
 	
 	public NotRenderedElementPage goToNotRenderedElementExample() {
-		driver.findElement(By.partialLinkText("Example 2")).click();
+		driver.findElement(By.linkText("Example 2: Element rendered after the fact")).click();
 		return new NotRenderedElementPage(driver, baseUrl);
 	}
 	

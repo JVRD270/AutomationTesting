@@ -24,9 +24,9 @@ public class DisappearingElementsPage extends PageObjectBase{
 		return this;
 	}
 	
-	public DisappearingElementsPage reloadAndCheckForElement() {
+	public DisappearingElementsPage reloadAndCheckForElement(int numberOfReloads) {
 		int currentNumberOfLi = liElements.size();
-		for(int i=0;i<=100;i++) {
+		for(int i=0;i<=numberOfReloads;i++) {
 			navigate();
 			if(currentNumberOfLi != liElements.size()) {
 				elementDisappearsAtLeastOnce = true;
