@@ -22,9 +22,9 @@ public class TablesPage extends PageObjectBase{
 		return this;
 	}
 	
-	public String getAmountDueForUserTableRow(String userEmailAddres) {
+	public String getAmountDueForUserTableRow(int userId) {
 		String text = new TableControlExtension(table1Element,driver)
-				.getRow(1)
+				.getRow(userId)
 				.getCell("Due")
 				.getText();
 		

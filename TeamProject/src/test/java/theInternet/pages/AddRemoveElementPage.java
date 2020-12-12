@@ -36,8 +36,8 @@ public class AddRemoveElementPage extends PageObjectBase{
 	
 	public AddRemoveElementPage removeElements(int howManyClicks) {
 		for(int i=0;i<howManyClicks; i++) {
-			removeButtons.get(removeButtons.size()-1).click();
-			removeButtons.remove(removeButtons.size()-1);
+			removeButtons.get(0).click();
+			removeButtons.remove(0);
 		}
 		return this;
 	}

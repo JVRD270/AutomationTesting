@@ -12,12 +12,11 @@ import org.testng.annotations.AfterTest;
 public class TablesTest extends TheInternetTestBase {
   @Test
   public void canGetTable1CellContents() {
-	  String userEmailAddress = "jdoe@hotmail.com";
 		String expectedText = "$50.00";
 		
 		String actualText = new TablesPage(webDriver, baseUrl)
 				.navigate()
-				.getAmountDueForUserTableRow(userEmailAddress);
+				.getAmountDueForUserTableRow(1);
 
 		Assert.assertEquals(actualText, expectedText);
   }

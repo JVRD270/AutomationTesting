@@ -23,8 +23,8 @@ public class AddRemoveElementsTest extends TheInternetTestBase{
 
 	@Test
 	public void CanDeleteElements() {
-		int expectedAddedElements = 10;
-		int expectedRemovedElements = 4;
+		int expectedAddedElements = 5;
+		int expectedRemovedElements = 5;
 		if (expectedAddedElements - expectedRemovedElements < 0) {
 			throw new ArithmeticException("you cannot remove more elements than you added");
 		}
